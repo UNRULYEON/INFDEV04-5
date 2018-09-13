@@ -21,11 +21,11 @@ namespace Lecture1
 				// db.Movies.Add(m);
 				// db.SaveChanges();
 
-				Movie foundMovie = db.Movies.Find(1);
-				Console.WriteLine("Found movie with title" + foundMovie.Title);
-				foundMovie.Title = "White cats, Black cats...";
-				db.SaveChanges();
-				Console.WriteLine("Title changed");
+				// Movie foundMovie = db.Movies.Find(1);
+				// Console.WriteLine("Found movie with title" + foundMovie.Title);
+				// foundMovie.Title = "White cats, Black cats...";
+				// db.SaveChanges();
+				// Console.WriteLine("Title changed");
 			}
 
       Console.WriteLine("Hello World!");

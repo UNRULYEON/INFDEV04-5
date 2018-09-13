@@ -15,6 +15,28 @@ namespace Model
       //here we define the name of our database
       optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=MovieDB;Pooling=true;");
     }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      modelBuilder.Entity<MovieActor>()
+        .HasKey(t => new { t.ActorId, t.MovieId });
+      modelBuilder.Entity<MovieActor>()
+        .HasOne(ma => ma.Movie)
+        .WithMany(m => m.Actors)
+        .HasForeignKey(ma => ma.MovieId);
+      modelBuilder.Entity<MovieActor>()
+        .HasOne(ma => ma.Actor)
+        .WithMany(m => m.Movies)
+        .HasForeignKey(ma => ma.ActorId);
+    }
+  }
+
+  //this is the typed representation of our join table mapping a movie with an actor
+  public class MovieActor{
+    public int MovieId { get; set; }
+    public Movie Movie { get; set; }
+    public int ActorId { get; set; }
+    public Actor Actor { get; set; }
   }
 
   //this is the typed representation of a movie in our project
@@ -22,7 +44,7 @@ namespace Model
   {
     public int Id { get; set; }
     public string Title { get; set; }
-    public List<Actor> Actors { get; set; }
+    public virtual List<MovieActor> Actors { get; set; }
   }
 
   //this is the typed representation of an actor in our project
@@ -30,6 +52,6 @@ namespace Model
   {
     public int Id { get; set; }
     public string Name { get; set; }
-    public int MovieId { get; set; }
+    public virtual List<MovieActor> Movies { get; set; }
   }
 }
