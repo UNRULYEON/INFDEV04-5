@@ -1,0 +1,11 @@
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/bin/Debug/netcoreapp2.1/Lecture1.deps.json
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/bin/Debug/netcoreapp2.1/Lecture1.runtimeconfig.json
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/bin/Debug/netcoreapp2.1/Lecture1.runtimeconfig.dev.json
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/bin/Debug/netcoreapp2.1/Lecture1.dll
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/bin/Debug/netcoreapp2.1/Lecture1.pdb
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/obj/Debug/netcoreapp2.1/Lecture1.csprojAssemblyReference.cache
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/obj/Debug/netcoreapp2.1/Lecture1.csproj.CoreCompileInputs.cache
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/obj/Debug/netcoreapp2.1/Lecture1.AssemblyInfoInputs.cache
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/obj/Debug/netcoreapp2.1/Lecture1.AssemblyInfo.cs
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/obj/Debug/netcoreapp2.1/Lecture1.dll
+/Users/amarkisoensingh/Github/HR/INFDEV04-5/Lecture1/obj/Debug/netcoreapp2.1/Lecture1.pdb
