@@ -43,7 +43,10 @@ namespace Lecture1
 		{
 			using (var db = new MovieContext())
 			{
-				var projected_movies = from m in db.Movies select m;
+				var projected_movies =	from m in db.Movies
+																where m.Release > new DateTime(2000, 1, 1)
+																select m;
+
 				Console.WriteLine("Movie title | release");
 				foreach (var movie in projected_movies)
 				{
