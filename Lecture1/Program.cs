@@ -43,8 +43,18 @@ namespace Lecture1
 		{
 			using (var db = new MovieContext())
 			{
-				var projected_movies =	from m in db.Movies
+				// Projection
+				// var projected_movies = from m in db.Movies select m;
+
+				// Projection with filtering
+				// var projected_movies =	from m in db.Movies
+				// 												where m.Release > new DateTime(2000, 1, 1)
+				// 												select m;
+
+				// Projetion with ordering
+				var projected_movies = 	from m in db.Movies
 																where m.Release > new DateTime(2000, 1, 1)
+																orderby m.Release descending
 																select m;
 
 				Console.WriteLine("Movie title | release");
