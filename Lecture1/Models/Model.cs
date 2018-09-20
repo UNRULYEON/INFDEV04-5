@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 
@@ -12,9 +13,15 @@ namespace Model
     public DbSet<Actor> Actors { get; set; }
 
     //this method is run automatically by EF the first time we run the application
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
       //here we define the name of our database
       optionsBuilder.UseNpgsql("User ID=postgres;Password=;Host=localhost;Port=5432;Database=MovieDB;Pooling=true;");
+
+      //activate logging for compiled queries
+      var lf = new LoggerFactory();
+      lf.AddProvider(new MyLoggerProvider());
+      optionsBuilder.UseLoggerFactory(lf);
     }
 
   }
